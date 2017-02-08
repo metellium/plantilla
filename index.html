@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Practica1</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mystilo.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function ()
+	{
+		//alert ("hola mundo");		
+
+		$("#btnCalcularSuma").click(function ()
+		{
+			var n1=parseInt($("#num1").val());
+			var n2=parseInt($("#num2").val());
+			var resultadoSuma=n1+n2;			
+			$("#resultadoSuma").val("La Suma de "+n1+" y"+n2+" es: "+resultadoSuma);	
+		});
+		$("#btnCalcularResta").click(function ()
+		{
+			var n1=parseInt($("#num3").val());
+			var n2=parseInt($("#num4").val());
+			var resultadoResta=n1-n2;			
+			$("#resultadoResta").val("La Resta de "+n1+" y"+n2+" es: "+resultadoResta);	
+		});
+		$("#btnCalcularMulti").click(function ()
+		{
+			var n1=parseInt($("#num5").val());
+			var n2=parseInt($("#num6").val());
+			var resultadoMulti=n1*n2;			
+			$("#resultadoMulti").val("La Multiplicación de "+n1+" y"+n2+" es: "+resultadoMulti);	
+		});
+		$("#btnCalcularDiv").click(function ()
+		{
+			var n1=parseInt($("#num7").val());
+			var n2=parseInt($("#num8").val());
+			var resultadoDivi=n1/n2;			
+			$("#resultadoDivi").val("La Divición de "+n1+" y"+n2+" es: "+resultadoDivi);	
+		});
+		$("#btnCalcularFibo").click(function ()
+		{
+			var n1=parseInt($("#num9").val());
+			var cont=1;
+			var res=0;
+			for (var i = 0; i < n1; i++) {				
+				cont=cont+i;
+				res=res+cont;								
+			$("#resultadoFibo").val(res);	
+			}
+			
+			$("#resultadoFibo").val(cont);	
+		});
+
+		
+	});
+
+	
+</script>
+</head>
+	<body bgcolor="#EEEEEE">
+		<div data-role="page" id="Principal">
+		<div data-role="header">
+
+			<p>Principal</p>
+		</div>	
+			<div data-role="content">
+				<p>Contenido de la aplicación</p>
+				<a href="#Operaciones" data-role="button" data-icon="check" data-transition="flip">Clic para Operaciones Básicas</a>
+				<a href="#Fibonacci" data-role="button" data-icon="check" data-transition="flip">Clic para Serie Fibonacci</a>
+				<a href="#Desarrollador" data-role="button" data-icon="check" data-transition="flip">Clic para Datos de Desarrollador</a>
+				
+										
+			</div>
+			<div data-role="footer">
+			<p>pie de la aplicación</p>
+			</div>
+			</div>
+
+			<div data-role="page" id="Operaciones">
+				<div data-role="header">
+					<center><p>Operaciones Básicas</p></center>
+				</div>	
+				<a href="#Suma" data-role="button" data-icon="check" data-transition="flip">Clic para Suma</a>
+				<a href="#Resta" data-role="button" data-icon="check" data-transition="flip">Clic para Resta</a>
+				<a href="#Multiplicación" data-role="button" data-icon="check" data-transition="flip">Clic para Multiplicación</a>
+				<a href="#Divición" data-role="button" data-icon="check" data-transition="flip">Clic para Divición</a>
+
+				<div data-role="footer">
+					<p>pie de la aplicación</p>
+				</div>
+			</div>
+
+			<div data-role="page" id="Fibonacci">
+				<div data-role="header">
+					<center><p>Calcular Fibonacci</p></center>
+				</div>	
+
+				<input type="text" id="num9" placeholder="Escribe un número" >
+				<input type="button" id="btnCalcularFibo" value="calcular Fibonacci">
+				<input type="text" id="resultadoFibo" placeholder="Resultado" >				
+				
+
+				<div data-role="footer">
+					<p>pie de la aplicación</p>
+				</div>
+			</div>
+
+			<div data-role="page" id="Desarrollador">
+				<div data-role="header">
+					<center><p>Datos Desarrollador</p></center>
+				</div><center>
+			<p>Gerardo Medellín Vázquez</p>
+			<p>Ing. Sistemas Computacionales</p>
+			<p>NC:15940026</p>
+			<p>emal: mede01@live.com.mx</p>
+			<p>tel: 247-119-57-76</p>
+			<p>Asignatura: Administración de Base de datos para Dispositivos Móviles</p>
+						</center>	
+				<div data-role="footer">
+					<p>pie de la aplicación</p>
+				</div>
+			</div>
+
+			<div data-role="page" id="Suma">
+				<div data-role="header">
+					<center><p>Suma</p></center>
+				</div>	
+				<input type="text" id="num1" placeholder="Escribe un número" >
+				<input type="text" id="num2" placeholder="Escribe un número" >
+				<input type="button" id="btnCalcularSuma" value="calcular Suma">
+				<input type="text" id="resultadoSuma" placeholder="Resultado" >
+				<div data-role="footer">
+					<p>pie de la aplicación</p>
+				</div>
+			</div>
+			<div data-role="page" id="Resta">
+				<div data-role="header">
+					<center><p>Suma</p></center>
+				</div>	
+				<input type="text" id="num3" placeholder="Escribe un número" >
+				<input type="text" id="num4" placeholder="Escribe un número" >
+				<input type="button" id="btnCalcularResta" value="calcular Resta">
+				<input type="text" id="resultadoResta" placeholder="Resultado" >
+				<div data-role="footer">
+					<p>pie de la aplicación</p>
+				</div>
+			</div>
+			<div data-role="page" id="Multiplicación">
+				<div data-role="header">
+					<center><p>Suma</p></center>
+				</div>	
+				<input type="text" id="num5" placeholder="Escribe un número" >
+				<input type="text" id="num6" placeholder="Escribe un número" >
+				<input type="button" id="btnCalcularMulti" value="calcular Multiplicación">
+				<input type="text" id="resultadoMulti" placeholder="Resultado" >
+				<div data-role="footer">
+					<p>pie de la aplicación</p>
+				</div>
+			</div>
+			<div data-role="page" id="Divición">
+				<div data-role="header">
+					<center><p>Suma</p></center>
+				</div>	
+				<input type="text" id="num7" placeholder="Escribe un número" >
+				<input type="text" id="num8" placeholder="Escribe un número" >
+				<input type="button" id="btnCalcularDiv" value="calcular Divición">
+				<input type="text" id="resultadoDivi" placeholder="Resultado" >
+				<div data-role="footer">
+					<p>pie de la aplicación</p>
+				</div>
+			</div>
+
+
+
+</body>
+</html>
